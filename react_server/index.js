@@ -1,25 +1,34 @@
 const express = require('express'); // express 라이브러리를 가져옴(import)
+const cors = require('cors');
 
 const app = express(); // express 객체 생성
 const port = process.env.PORT || 5000; // 5000번 포트를 사용하기 위한 코드
+
+app.use(cors()); // CORS 미들웨어 추가
 
 // 테스트를 하기 위해 생성하는 데이터
 const data = [
     {
         id : 1,
-        content : 'html',
-        desc : 'html is hyper text markup language ....'
+        title : 'HTML',
+        desc : 'HTML is Hyper Text Markup Language.'
     }
     ,
     {
-        id: 2,
-        content : 'css',
-        desc : 'css is ....'
+        id : 2,
+        title : 'CSS',
+        desc : 'CSS is for design.'
+    }
+    ,
+    {
+        id : 3,
+        title : 'JavaScript',
+        desc : 'JavaScript is for interactive.'
     }
 ];
 
 // 함수 선언(function)
-app.get('/api/todo', (req, res) => {
+app.get('/api/contents', (req, res) => {
     res.json(data);
 });
 
