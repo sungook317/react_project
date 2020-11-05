@@ -2,7 +2,7 @@ const express = require('express'); // express 라이브러리를 가져옴(impo
 const cors = require('cors');
 
 const app = express(); // express 객체 생성
-const port = process.env.PORT || 5000; // 5000번 포트를 사용하기 위한 코드
+const port = process.env.PORT || 80; // 80번 포트를 사용하기 위한 코드
 
 app.use(cors()); // CORS 미들웨어 추가
 
