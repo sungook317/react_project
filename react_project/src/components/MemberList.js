@@ -18,7 +18,7 @@ class MemberList extends Component {
                       <a href={"/content/" + members[idx].id}
                          data-id = {members[idx].id}
                          onClick={function(e){
-                           e.preventDefalut();
+                           e.preventDefault();
                            this.props.onChangePage(e.target.dataset.id);
                          }.bind(this)}>{members[idx].userName}
                       </a>
