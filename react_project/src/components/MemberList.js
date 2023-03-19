@@ -10,19 +10,22 @@ class MemberList extends Component {
   }
 
   render() {
+    var mode = this.props.mode;
     var members = this.props.members;
     var htmlList = [];
 
-    for(var idx = 0; idx < members.length; idx ++) {
-      htmlList.push(<li key={members[idx].id}>
-                      <a href={"/content/" + members[idx].id}
-                         data-id = {members[idx].id}
-                         onClick={function(e){
-                           e.preventDefault();
-                           this.props.onChangePage(e.target.dataset.id);
-                         }.bind(this)}>{members[idx].userName}
-                      </a>
-                    </li>);
+    if(mode !== 'main') {
+      for(var idx = 0; idx < members.length; idx ++) {
+        htmlList.push(<li key={members[idx].id}>
+                        <a href={"/content/" + members[idx].id}
+                           data-id = {members[idx].id}
+                           onClick={function(e){
+                             e.preventDefault();
+                             this.props.onChangePage(e.target.dataset.id);
+                           }.bind(this)}>{members[idx].userName}
+                        </a>
+                      </li>);
+      }
     }
 
     return(

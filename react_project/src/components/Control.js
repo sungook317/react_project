@@ -3,20 +3,36 @@ import React, {Component} from 'react';
 class Control extends Component {
   render() {
     return(
-      <ul>
-        <li><a href="/create" onClick={function(e){
-          e.preventDefault();
-          this.props.onChangeMode('create');
-        }.bind(this)}>ceate</a></li>
-        <li><a href="/update" onClick={function(e){
-          e.preventDefault();
-          this.props.onChangeMode('update');
-        }.bind(this)}>update</a></li>
-        <li><input onClick={function(e){
-          e.preventDefault();
-          this.props.onChangeMode('delete');
-        }.bind(this)} type="button" value="delete"></input></li>
-      </ul>
+      <nav>
+        <input type="button"
+               value="회원 조회"
+               onClick={function(e){
+                 e.preventDefault();
+                 this.props.onChangeMode('readAll');
+               }.bind(this)}>
+        </input>
+        <input type="button"
+               value="회원 등록"
+               onClick={function(e){
+                 e.preventDefault();
+                 this.props.onChangeMode('create');
+               }.bind(this)}>
+        </input>
+        <input type="button"
+               value="회원 수정"
+               onClick={function(e){
+                 e.preventDefault();
+                 this.props.onChangeMode('update');
+               }.bind(this)}>
+        </input>
+        <input type="button"
+               value="회원 삭제"
+               onClick={function(e){
+                 e.preventDefault();
+                 this.props.onChangeMode('delete');
+               }.bind(this)}>
+        </input>
+      </nav>
     );
   }
 }

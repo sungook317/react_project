@@ -20,8 +20,8 @@ class UpdateMember extends Component {
 
   render() {
     return(
-      <article>
-        <h2>Update</h2>
+      <nav>
+        <h2>회원 정보 수정</h2>
         <form action="/update_process" method="post"
           onSubmit={function(e){
             e.preventDefault();
@@ -29,19 +29,19 @@ class UpdateMember extends Component {
           }.bind(this)}>
           <input type="hidden" name="id" value={this.state.id}></input>
           <p>
-            <input type="text" name="userId" placeholder="userId" value={this.state.userId} onChange={this.inputFormHandler}></input>
+            <b>회원 아이디:</b> <input type="text" name="userId" placeholder="아이디" value={this.state.userId} onChange={this.inputFormHandler}></input>
           </p>
           <p>
-            <input type="text" name="userPassword" placeholder="userPassword" value={this.state.userPassword} onChange={this.inputFormHandler}></input>
+            <b>회원 비밀번호:</b> <input type="text" name="userPassword" placeholder="비밀번호" value={this.state.userPassword} onChange={this.inputFormHandler}></input>
           </p>
           <p>
-            <input type="text" name="userName" placeholder="userName" value={this.state.userName} onChange={this.inputFormHandler}></input>
+            <b>회원 이름:</b> <input type="text" name="userName" placeholder="이름" value={this.state.userName} onChange={this.inputFormHandler}></input>
           </p>
           <p>
-            <input type="submit"></input>
+            <input type="submit" value="수정"></input>
           </p>
         </form>
-      </article>
+      </nav>
     );
   }
 }
