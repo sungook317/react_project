@@ -12,14 +12,15 @@ class App extends Component {
   constructor(props) {
     super(props);
 
-    this.memberCnt = 3;
+    this.memberCnt = 4;
     this.state = {
       mode:'main',
       selectedMemberId:0,
       members:[
         {id:1, userId:'aaa', userPassword:'bbb', userName:'name1'},
         {id:2, userId:'ccc', userPassword:'ddd', userName:'name2'},
-        {id:3, userId:'eee', userPassword:'fff', userName:'name3'}
+        {id:3, userId:'eee', userPassword:'fff', userName:'name3'},
+        {id:3, userId:'hhh', userPassword:'iii', userName:'name3'}
       ]
     }
   }
