@@ -194,7 +194,7 @@ class App extends Component {
     return _memberList;
   }
 
-  render() { // state를 변경하게 되면 render() 함수가 재실행
+  render() { // state를 변경하게 되면 render() 함수가 재실
     return(
       <div className="App">
         <MainTitle>
