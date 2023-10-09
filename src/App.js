@@ -204,7 +204,7 @@ class App extends Component {
                      this.setState({selectedMemberId:0, mode:_mode});
                    } else if(_mode === 'update') {
                      if(this.state.selectedMemberId === 0) {
-                       alert('수정할 회원을 선택해주세요.');
+                       alert('수정할 회원을 선택해주세요..');
                        return;
                      }
 
